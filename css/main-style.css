@@ -94,7 +94,7 @@ padding-top: var(--section-padding);
 padding-bottom: var(--section-padding);
 background-image: url("../imgs/landing.jpg");
 background-size: cover;
-position: relative;
+/* position: relative; */
 z-index: 2;
 width: 100%;
 left: 0;
@@ -219,11 +219,13 @@ background-color: #19c9fa58;
 header .landing,
 header .landing .hello {
     width: 100%;
+    margin: 0;
 }
 header .arrow {
     display: none;
 }
-header .landing p {
+header .landing p, 
+header .landing h3 {
     margin-left: 10px !important;
 }
 }
@@ -290,5 +292,38 @@ position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 40px;
+}
+@media(max-width:767px){
+    .services-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.services .services-content .serv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.services .services-content .serv i{
+    font-size: 30px;
+    /* width: 30px; */
+    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -o-transform: translateY(-20px);
+}
+.services .services-content .serv .serv-text{
+    margin-left: 40px;
+}
+.services .services-content .serv .serv-text h3{
+    color: var(--light-blue);
+    padding-bottom: 20px;
+}
+.services .services-content .serv .serv-text p{
+    color: rgb(150, 140, 140);
+    line-height: 1.6;
 }
 /* end services */
