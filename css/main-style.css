@@ -2,6 +2,7 @@
 :root {
 --light-blue: #19c8fa;
 --section-padding: 15px;
+--section-margin:100px;
 }
 * {
 -webkit-box-sizing: border-box;
@@ -333,6 +334,7 @@ position: relative;
     background-image: url(../imgs/free-background-4.jpg);
     background-size: cover;
     position: relative;
+    margin-bottom: var(--section-margin);
 }
 .side-box{
     background-color: #19c9fa58;
@@ -341,6 +343,11 @@ position: relative;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+}
+@media(max-width:767px){
+    .side-box{
+        width:100%
+    }
 }
 
 .side-box-text{
@@ -368,3 +375,80 @@ position: relative;
     margin-right: 30px;
 }
 /* end featurs */
+/* start portofolio */
+.portofolio{
+    margin-bottom: var(--section-margin);
+}
+.portofolio-header{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.portofolio-header h4{
+    text-transform: uppercase;
+    padding: 10px;
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+}
+.portofolio-header h4:hover{
+    color: white;
+    background-color: var(--light-blue);
+}
+.portofolio-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.portofolio-content img{
+    height: 250px;
+    width: 100%;
+    display: block;
+}
+.portofolio-content .box{
+    position: relative;
+    overflow: hidden;
+}
+.portofolio-content .box .caption{
+    padding-left: 10px;
+    position: absolute;
+    left: 0;
+    padding: 20px;
+    background-color: white;
+    width: 100%;
+    bottom: -100%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.portofolio-content .box:hover .caption{
+    bottom: 0;
+}
+.portofolio-content .box:hover img{
+    filter: grayscale(70%);
+    -webkit-filter: grayscale(70%);
+}
+.portofolio-content .box .caption h4:nth-child(2){
+    font-size: 12px;
+    color: var(--light-blue);
+    padding-top: 15px;
+}
+.portofolio .button{
+    margin: 50px 0 0 0;
+    display: inline-block;
+    position: absolute;
+    background-color: var(--light-blue);
+    left: 50%;
+    padding: 5px 25px;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    color: white;
+}
+/* .portofolio .button:hover .portofolio-content .img::after{
+    top: 70%;
+} */
+
+/* end portofolio */
