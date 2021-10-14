@@ -123,7 +123,6 @@ padding-top: var(--section-padding);
 padding-bottom: var(--section-padding);
 background-image: url("../imgs/landing.jpg");
 background-size: cover;
-/* position: relative; */
 z-index: 2;
 width: 100%;
 left: 0;
@@ -135,7 +134,7 @@ left: 0;
 top: 0;
 width: 100%;
 height: 100%;
-background-color: rgba(0, 0, 0, 80%);
+background-color: rgba(0, 0, 0, 60%);
 }
 header .container {
 display: flex;
@@ -519,19 +518,34 @@ position: relative;
     width: 100%;
 }
 .about-us-content{
-    background-image: url("../imgs/abstract-triangle-violet-texture-background.jpg");
-    background-size: cover;
-    height: 60vh;
+    min-height: 60vh;
     position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.about-us-content .over-lay video{
+    z-index: 0;
+    position: absolute; 
+    width: 100%; 
+    min-height: 100%; 
+    top: -60px;
+    
+}
+@media(max-width:767px){
+    .about-us-content .over-lay video{
+        width: calc(100% + 1100px);
+        left: -260px;
+    }
+}
+
 .about-us-content .container{
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 .about-us-content .banner{
     display: flex;
@@ -540,26 +554,73 @@ position: relative;
     color: white;
     background-color:#19c9fa58 ;
     flex-wrap: wrap;
-    max-height: 60vh;
+    min-height: 25vh;
+    width: 80%;
 }
 .about-us-content .container .banner  .counter{
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 50px;
+}
+.about-us-content .container .banner  .counter .icon-box {
+    width: 35px;
+    height: 40px;
+    border-radius: 4px;
+    position: relative;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.about-us-content .container .banner  .counter .icon-box::before{
+    content: "";
+    width: 35px;
+    height: 40px;
+    position: absolute;
+    border-radius: 4px;
+    background-color: black;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.about-us-content .container .banner  .counter .icon-box::after{
+    transform: rotatez(30deg);
+    -webkit-transform: rotatez(30deg);
+    -moz-transform: rotatez(30deg);
+    -ms-transform: rotatez(30deg);
+    -o-transform: rotatez(30deg);
+}
+.about-us-content .container .banner  .counter .icon-box::before{
+    transform: rotatez(-45deg);
+    -webkit-transform: rotatez(-45deg);
+    -moz-transform: rotatez(-45deg);
+    -ms-transform: rotatez(-45deg);
+    -o-transform: rotatez(-45deg);
 }
 .about-us-content .container .banner  .counter i{
     margin: 15px 0;
     font-size: 22px;
-    color: black;
+    color: white;
+    position: absolute;
 }
 .about-us-content .container .banner  .counter h2{
-    margin: 5px 0;
+    margin: 15px 0;
     font-size: 30px;
 }
 .about-us-content .container .banner  .counter h6{
-    margin: 15px 100px;
+    margin: 15px;
 }
 @media (max-width:767px){
     .about-us-content .container .banner  .counter h6{
-        margin: 15px 50px;
+        margin: 15px;
     }
 }
 /* end about us */
@@ -692,12 +753,17 @@ position: relative;
     font-size: 12px;
     display: flex;
     align-items: center;
+    border-radius: 2px;
     justify-content: center;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
 }
 .skills .container .our-skills .skills-indicators .skill:first-child .black-box{
     left: 80%;
