@@ -354,7 +354,6 @@ position: relative;
         width:100%
     }
 }
-
 .side-box-text{
     padding: 40px;
 }   
@@ -467,9 +466,9 @@ position: relative;
 .video{
     background-image: url("../imgs/unnamed.jpg");
     background-size: cover;
-    height: 80vh;
+    height: 60vh;
     position: relative;
-    margin-top: 180px;
+    margin-top: 120px;
 }
 .video .banner{
     background-color: #19c9fa58;
@@ -539,7 +538,6 @@ position: relative;
         left: -260px;
     }
 }
-
 .about-us-content .container{
     position: relative;
     display: flex;
@@ -578,7 +576,6 @@ position: relative;
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
 }
-
 .about-us-content .container .banner  .counter .icon-box::before{
     content: "";
     width: 35px;
@@ -630,11 +627,9 @@ position: relative;
 }
 .skills .container{
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
     gap: 100px;
 }
-
-
 .skills .container .testimonial .testimonial-header{
     margin-bottom: 50px;
     text-align: center;
@@ -719,10 +714,16 @@ position: relative;
 }
 .skills .container .our-skills .skills-indicators .skill{
     margin-bottom: 10%;
-    width: 100%;
+    width: 90%;
     height: 20px;
     background-color: #ddd;
     position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
 }
 .skills .container .our-skills .skills-indicators .skill::after{
     content: "";
@@ -798,6 +799,82 @@ position: relative;
     left: 5px;
     bottom: calc(100% + 5px);
 }
-
-
 /* end testimonial */
+/* start pricing */
+.pricing{
+    margin-top: 80px;
+}
+.pricing .container{
+    text-align: center;
+}
+.pricing .pricing-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+    gap: 20px;
+}
+.pricing .pricing-content .col .col-rows{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-top: solid 2px var(--light-blue);
+    border-bottom: solid 2px var(--light-blue);
+}
+.pricing .pricing-content .col .col-rows  h5{
+    text-transform: uppercase;
+    padding-top: 40px;
+}
+.pricing .pricing-content .col .col-rows h2{
+    width: 100%;
+    text-align: center;
+    padding: 15px 0 40px 0;
+    position: relative;
+    font-size: 35px;
+    font-weight: 900;
+    border-bottom: solid 2px var(--light-blue);
+}
+.pricing .pricing-content .col .col-rows h2::before{
+    content: "$";
+    position: absolute;
+    left: calc(50% - 40px);
+    font-size: 15px;
+    font-weight: 900;
+}
+.pricing .pricing-content .col .col-rows h2::after{
+    content: "/MON";
+    position: absolute;
+    font-size: 18px;
+    top: calc(100% - 40px);
+}
+.pricing .pricing-content .col .col-rows .feat{
+    text-transform: capitalize;
+    width: 50%;
+    text-align: center;
+    padding: 15px 0px;
+    font-size: 17px;
+}
+.pricing .pricing-content .col .col-rows .feat:not(:last-child){
+    border-bottom: 2px solid var(--light-blue);
+}
+.pricing .pricing-content .col .button{
+    text-align: center;
+    border: 1px solid var(--light-blue);
+    margin: 30px auto;
+    width: 60%;
+    padding: 10px;
+}
+.pricing .container > p{
+    text-align: center;
+    width: 60%;
+    margin: 30px auto;
+}
+.pricing .container > .button{
+    margin: 10px 0 0 0;
+    background-color: var(--light-blue);
+    padding: 10px 25px;
+    text-transform: uppercase;
+    color: white;
+    display: inline-block;
+}
+
+/* end pricing */
