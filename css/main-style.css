@@ -438,6 +438,7 @@ position: relative;
     -moz-transition: 0.6s;
     -ms-transition: 0.6s;
     -o-transition: 0.6s;
+    cursor: pointer;
 }
 @media(max-width:767px){
     .portofolio-header h4{
@@ -445,6 +446,10 @@ position: relative;
     }
 }
 .portofolio-header h4:hover{
+    color: white;
+    background-color: var(--light-blue);
+}
+.portofolio-header h4.active{
     color: white;
     background-color: var(--light-blue);
 }
@@ -622,6 +627,7 @@ position: relative;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
+    
 }
 .about-us-content .container .banner  .counter .icon-box::before{
     content: "";
@@ -634,13 +640,8 @@ position: relative;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
-}
-.about-us-content .container .banner  .counter .icon-box::after{
-    transform: rotatez(30deg);
-    -webkit-transform: rotatez(30deg);
-    -moz-transform: rotatez(30deg);
-    -ms-transform: rotatez(30deg);
-    -o-transform: rotatez(30deg);
+    animation: infinite 3s rotation linear;
+    -webkit-animation: infinite 3s rotation linear;
 }
 .about-us-content .container .banner  .counter .icon-box::before{
     transform: rotatez(-45deg);
@@ -821,6 +822,7 @@ position: relative;
     -moz-border-radius: 2px;
     -ms-border-radius: 2px;
     -o-border-radius: 2px;
+    visibility: hidden;
 }
 .skills .container .our-skills .skills-indicators .skill:first-child .black-box{
     left: 80%;
@@ -854,6 +856,9 @@ position: relative;
     position: absolute;
     left: 5px;
     bottom: calc(100% + 5px);
+}
+.skills .container .our-skills .skills-indicators .skill h4:hover + .black-box{
+    visibility: visible;
 }
 /* end testimonial */
 /* start quote */
@@ -961,6 +966,7 @@ position: relative;
     margin: 30px auto;
     width: 60%;
     padding: 10px;
+    cursor: pointer;
 }
 .pricing .container > p{
     text-align: center;
@@ -974,6 +980,7 @@ position: relative;
     text-transform: uppercase;
     color: white;
     display: inline-block;
+    cursor: pointer;
 }
 /* end pricing */
 /* start subscribe */
@@ -1024,6 +1031,7 @@ position: relative;
     outline: none;
     border: none;
     border: 1px solid #ddd;
+    border-right: none;
     padding: 10px 40px 10px 35px;
     width: calc(100% - 130px);
 }
@@ -1042,8 +1050,10 @@ position: relative;
     text-transform: uppercase;
     background-color: var(--light-blue);
     border: none;
+    border-left: none;
     padding:11px;
     width: 130px;
+    cursor: pointer;
 }
 .subscribe .container p{
     color: white;
@@ -1116,6 +1126,7 @@ position: relative;
     padding: 8px 10px;
     color: white;
     align-self: flex-end;
+    cursor: pointer;
 }
 .contact .container .contact-notes{
     flex-basis: 25%;
