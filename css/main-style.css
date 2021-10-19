@@ -883,14 +883,16 @@ position: relative;
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
     color: white;
-    font-size: 40px;
+    font-size: 20px;
+    Margin-right: 10px;
 }
 .quote .container p:first-child:after{
     content: "\f10e";
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     color: white;
-    font-size: 40px;
+    font-size: 20px;
+    Margin-left: 10px;
 }
 .quote .container p:last-child{
     color: #ddd;
