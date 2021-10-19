@@ -880,14 +880,14 @@ position: relative;
 }
 .quote .container p:first-child:before{
     content: '\f10d';
-    font-family: 'Font Awesome 5 Free';
+    font-family: 'Font Awesome 6 Free';
     font-weight: 900;
     color: white;
     font-size: 40px;
 }
 .quote .container p:first-child:after{
     content: "\f10e";
-    font-family: "Font Awesome 5 Free";
+    font-family: "Font Awesome 6 Free";
     font-weight: 900;
     color: white;
     font-size: 40px;
